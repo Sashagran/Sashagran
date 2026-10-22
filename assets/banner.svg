@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" role="img" aria-label="Alexander Zheltov — Information Security">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="0.55" stop-color="#0d1b2a"/>
+      <stop offset="1" stop-color="#102a43"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#22d3ee"/>
+      <stop offset="1" stop-color="#3b82f6"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.82" cy="0.45" r="0.45">
+      <stop offset="0" stop-color="#22d3ee" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#1e3a5f" stroke-width="1" opacity="0.45"/>
+    </pattern>
+    <clipPath id="term"><rect x="770" y="58" width="370" height="184" rx="12"/></clipPath>
+    <style>
+      .name{font:700 52px 'Segoe UI',Helvetica,Arial,sans-serif;fill:#f8fafc}
+      .role{font:500 22px 'Segoe UI',Helvetica,Arial,sans-serif;fill:#94a3b8}
+      .tag{font:600 14px 'Segoe UI',Helvetica,Arial,sans-serif;fill:#e2e8f0}
+      .mono{font:14px Consolas,'DejaVu Sans Mono',Menlo,monospace}
+      .p{fill:#22d3ee}.c{fill:#e2e8f0}.ok{fill:#4ade80}.w{fill:#fbbf24}.r{fill:#f87171}.m{fill:#64748b}
+      .line{opacity:0;animation:show .01s forwards}
+      .l1{animation-delay:.3s}.l2{animation-delay:.9s}.l3{animation-delay:1.5s}.l4{animation-delay:2.1s}.l5{animation-delay:2.7s}.l6{animation-delay:3.3s}
+      .cursor{animation:blink 1s steps(1) infinite}
+      .scan{animation:scan 4s ease-in-out infinite}
+      @keyframes show{to{opacity:1}}
+      @keyframes blink{50%{opacity:0}}
+      @keyframes scan{0%{transform:translateY(0)}50%{transform:translateY(170px)}100%{transform:translateY(0)}}
+    </style>
+  </defs>
+
+  <rect width="1200" height="300" fill="url(#bg)"/>
+  <rect width="1200" height="300" fill="url(#grid)"/>
+  <rect width="1200" height="300" fill="url(#glow)"/>
+
+  <!-- shield mark -->
+  <g transform="translate(60 72)">
+    <path d="M28 0 L56 10 V30 C56 48 44 60 28 66 C12 60 0 48 0 30 V10 Z" fill="none" stroke="url(#accent)" stroke-width="3"/>
+    <path d="M17 33 L25 41 L40 24" fill="none" stroke="#22d3ee" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <text x="140" y="120" class="name">Alexander Zheltov</text>
+  <text x="142" y="158" class="role">Information Security · Threat Detection · Python</text>
+  <rect x="142" y="176" width="120" height="4" rx="2" fill="url(#accent)"/>
+
+  <g transform="translate(142 206)">
+    <rect width="190" height="30" rx="15" fill="#132a44" stroke="#1f4b75"/>
+    <text x="95" y="20" text-anchor="middle" class="tag">MSc Cybersecurity · HSE</text>
+    <rect x="202" width="150" height="30" rx="15" fill="#132a44" stroke="#1f4b75"/>
+    <text x="277" y="20" text-anchor="middle" class="tag">Blue Team · GRC</text>
+    <rect x="364" width="150" height="30" rx="15" fill="#0f3b2e" stroke="#1d6b4f"/>
+    <circle cx="382" cy="15" r="5" fill="#4ade80"/>
+    <text x="446" y="20" text-anchor="middle" class="tag">Open to work</text>
+  </g>
+
+  <!-- terminal -->
+  <g>
+    <rect x="770" y="58" width="370" height="184" rx="12" fill="#0a0f1a" stroke="#1f3a5a"/>
+    <rect x="770" y="58" width="370" height="28" rx="12" fill="#111b2b"/>
+    <rect x="770" y="74" width="370" height="12" fill="#111b2b"/>
+    <circle cx="790" cy="72" r="5" fill="#ff5f56"/><circle cx="806" cy="72" r="5" fill="#ffbd2e"/><circle cx="822" cy="72" r="5" fill="#27c93f"/>
+    <text x="955" y="77" text-anchor="middle" class="mono m" font-size="12">sashagran@soc:~</text>
+    <g clip-path="url(#term)">
+      <rect x="770" y="86" width="370" height="2" fill="#22d3ee" opacity="0.25" class="scan"/>
+    </g>
+    <text x="786" y="110" class="mono line l1"><tspan class="p">$</tspan><tspan class="c"> authlog-hunter auth.log</tspan></text>
+    <text x="786" y="132" class="mono line l2"><tspan class="r">[CRITICAL]</tspan><tspan class="c"> T1078 brute force → login</tspan></text>
+    <text x="786" y="154" class="mono line l3"><tspan class="p">$</tspan><tspan class="c"> phishscope invoice.eml</tspan></text>
+    <text x="786" y="176" class="mono line l4"><tspan class="w">score 100/100</tspan><tspan class="c"> look-alike: paypa1</tspan></text>
+    <text x="786" y="198" class="mono line l5"><tspan class="p">$</tspan><tspan class="c"> integrity-watch check</tspan></text>
+    <text x="786" y="220" class="mono line l6"><tspan class="ok">OK</tspan><tspan class="c"> baseline signature valid</tspan><tspan class="p cursor"> ▌</tspan></text>
+  </g>
+</svg>
